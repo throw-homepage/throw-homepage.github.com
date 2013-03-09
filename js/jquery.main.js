@@ -10,9 +10,9 @@ $(document).ready(function(){
 	$(window).resize(sizeContent);
 	var colDivs = (".getting-started, .tutorial, .showcase, .drop");
 	var tutDivs = (".frame, .output");
-	for(var i = 1; i <= 100; i++) {
-		$('.env').append('<div class="random-shape grav"></div>');
-	}
+	//for(var i = 1; i <= 100; i++) {
+	//	$('.env').append('<div class="random-shape grav"></div>');
+	//}
 
 
 
