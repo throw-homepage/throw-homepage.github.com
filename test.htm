@@ -1,0 +1,71 @@
+
+<!-- 
+Throw (The Game Platform)
+http://josephpcohen.com
+http://gravityscript.googlecode.com/
+
+Copyright 2012, Joseph Paul Cohen
+Released under the GPLv3 License
+-->
+<html>
+<head>
+<script src="http://gravityscript.googlecode.com/svn/trunk/throw-dev.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Throw! (The Game Platform)</title>
+</head>
+<body>
+
+<!--
+EDIT BELOW THIS LINE
+Below this line is the section that you edit
+-->
+
+
+<script>
+
+function impact(object1, object2){
+	
+	
+	console.log(object1.id + " hit " + object2.id);
+	
+	if (object1.id == "TARGET" || object2.id == "TARGET"){
+	
+		$("#TARGET").animate({
+			height: "120",
+			width: "440",
+		},50,'linear',
+		function(){
+			
+			$("#TARGET").animate({
+				height: "110",
+				width: "430",
+			},50,'linear');
+		});
+	
+	}
+	
+	
+}
+
+
+
+</script>
+
+
+<center>
+<span id="T" class="grav" style="background-color:red; height:100px; width:100px; font-size:80pt;">T</span>
+<span id="H" class="grav" style="background-color:red; height:100px; width:100px; font-size:80pt;">H</span>
+<span id="R" class="grav" style="background-color:red; height:100px; width:100px; font-size:80pt;">R</span>
+<span id="O" class="grav" style="background-color:red; height:100px; width:100px; font-size:80pt;">O</span>
+<span id="W" class="grav" style="background-color:red; height:100px; width:100px; font-size:80pt;">W</span>
+<span id="TARGET"  style="background-color:red; height:100px; width:430px; font-size:80pt;position:absolute; bottom:5px;">TARGET</span>
+</center>
+
+
+
+<!--
+EDIT ABOVE THIS LINE
+-->
+
+</body>
+</html>
