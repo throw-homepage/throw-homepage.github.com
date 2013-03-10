@@ -76,8 +76,15 @@
 					<h3>Input</h3>
 					<form>
 						<textarea id="codeTextarea" style="width: 100%; height: 100%;">
-<div class="solid" style="background: red; width: 50%; height: 50px; position: absolute; bottom: 10%; right: 0"></div>
-<div class="grav" style="background: black; width: 50px; height: 50px;"></div>
+
+<span class="grav" style="background: yellow; font-size:30pt;">GRAV</span>
+
+<center>
+<span class="solid" style="background: red; font-size:30pt;position:absolute;bottom:0px">SOLID</span>
+</center>
+
+<script src="http://gravityscript.googlecode.com/svn/trunk/throw.js"></script>
+
 						</textarea>
 					</form>
 				</div>
@@ -110,33 +117,27 @@
 
 				if (old != div.val()) {
 
-					//console.log("not equal");
+					//console.log("updating iframe");
 					old = div.val();
-					$('#outputframe').html("");
 					
 					
-					
+					//create new iframe so we clean out any old errors
 					var iframe = $('<iframe></iframe>', {
 					      name:"contentFrame"
 					      ,id:"contentFrame"
-					      ,src:"base.html"
 					  });
-					  
-					  iframe.css("height", "100%").css("width", "100%");
-					  
-					 // iframe.src="base.html";
-					  
-					  iframe.load(function() {
-					      $(this).contents().find("body").append(old); // works
-					  });
-					  
-					  iframe.appendTo("#outputframe");
+					iframe.css("height", "100%").css("width", "100%");
+				 	iframe.appendTo("#outputframe");
 					
-					
-					//$('#outputframe').contents().find('body').append(old);
+				 	//get the raw element so we can append scripts
+				 	//jquery append will not allow script tags to be appended
+					v = document.getElementById('contentFrame');
+					v.contentWindow.document.open();
+					v.contentWindow.document.write(old);
+					v.contentWindow.document.close();
 					
 				}
-				
+				// set timeout for future updates
 				window.setTimeout(update, 150);
 			}
 		</script>

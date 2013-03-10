@@ -80,24 +80,23 @@ function impact(object1, object2){
 				<div class="frame">
 					<h3>Input</h3>
 					<form>
-					<img style="width:150px" src="img/const.jpg"/>
-						<!--  <textarea id="codeTextarea" style="width: 100%; height: 100%;">
+					<textarea id="codeTextarea" style="width: 100%; height: 100%;">
 <script type="text/javascript">
 function impact(object1, object2){
 
 object1.innerHTML = parseInt(object1.innerHTML) +1
+object2.innerHTML = parseInt(object2.innerHTML) +1
 	
 }
 </script>
 
+<span class="grav" style="background-color:red;font-size:30pt;">00</span>
+<span class="grav" style="background-color:yellow;font-size:30pt;">00</span>
+<span class="grav" style="background-color:cyan;font-size:30pt;">00</span>
+<span class="grav" style="background-color:green;font-size:30pt;">00</span>
 
-<span class="grav" style="background-color:red; height:100px; width:100px; font-size:30pt;">0</span>
-<span class="grav" style="background-color:red; height:100px; width:100px; font-size:30pt;">0</span>
-<span class="grav" style="background-color:red; height:100px; width:100px; font-size:30pt;">0</span>
-<span class="grav" style="background-color:red; height:100px; width:100px; font-size:30pt;">0</span>
-<span class="grav" style="background-color:red; height:100px; width:100px; font-size:30pt;">0</span>
-
-</textarea>-->
+<script src="http://gravityscript.googlecode.com/svn/trunk/throw.js"></script>
+</textarea>
 					</form>
 				</div>
 				<div class="output">
@@ -119,7 +118,7 @@ object1.innerHTML = parseInt(object1.innerHTML) +1
 			var old = '';
 
 			function init() {
-				//update();
+				update();
 			}
 
 			function update() {
@@ -129,33 +128,27 @@ object1.innerHTML = parseInt(object1.innerHTML) +1
 
 				if (old != div.val()) {
 
-					//console.log("not equal");
+					//console.log("updating iframe");
 					old = div.val();
-					$('#outputframe').html("");
 					
 					
-					
+					//create new iframe so we clean out any old errors
 					var iframe = $('<iframe></iframe>', {
 					      name:"contentFrame"
 					      ,id:"contentFrame"
-					      ,src:"base.html"
 					  });
-					  
-					  iframe.css("height", "100%").css("width", "100%");
-					  
-					 // iframe.src="base.html";
-					  
-					  iframe.load(function() {
-					      $(this).contents().find("body").append(old); // works
-					  });
-					  
-					  iframe.appendTo("#outputframe");
+					iframe.css("height", "100%").css("width", "100%");
+				 	iframe.appendTo("#outputframe");
 					
-					
-					//$('#outputframe').contents().find('body').append(old);
+				 	//get the raw element so we can append scripts
+				 	//jquery append will not allow script tags to be appended
+					v = document.getElementById('contentFrame');
+					v.contentWindow.document.open();
+					v.contentWindow.document.write(old);
+					v.contentWindow.document.close();
 					
 				}
-				
+				// set timeout for future updates
 				window.setTimeout(update, 150);
 			}
 		</script>
