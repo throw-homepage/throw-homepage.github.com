@@ -1,2 +1,0 @@
-rm *-thumb.png
-for i in *; do convert -thumbnail 150x $i $i-thumb.png; done
