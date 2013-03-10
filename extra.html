@@ -86,7 +86,7 @@
 				</div>
 				<div class="output">
 					<h3>Output</h3>
-					<iframe id="outputframe"></iframe>
+					<div id="outputframe"></div>
 				</div>
 			</div>
 		</div>
@@ -123,6 +123,7 @@
 					      ,id:"contentFrame"
 					  });
 					iframe.css("height", "100%").css("width", "100%");
+					$("#outputframe").text('');
 				 	iframe.appendTo("#outputframe");
 					
 				 	//get the raw element so we can append scripts
@@ -137,7 +138,6 @@
 				window.setTimeout(update, 150);
 			}
 		</script>
-
 		<script type="text/javascript">
 		
 		var _gaq = _gaq || [];
