@@ -100,18 +100,43 @@
 
 				if (old != div.val()) {
 
-					//console.log("not equal");
+					//console.log("updating iframe");
 					old = div.val();
-					$('#outputframe').contents().find('body').html("");
 					
 					
+					//create new iframe so we clean out any old errors
+					var iframe = $('<iframe></iframe>', {
+					      name:"contentFrame"
+					      ,id:"contentFrame"
+					  });
+					iframe.css("height", "100%").css("width", "100%");
+				 	iframe.appendTo("#outputframe");
 					
-					$('#outputframe').contents().find('body').append(old);
+				 	//get the raw element so we can append scripts
+				 	//jquery append will not allow script tags to be appended
+					v = document.getElementById('contentFrame');
+					v.contentWindow.document.open();
+					v.contentWindow.document.write(old);
+					v.contentWindow.document.close();
 					
 				}
-				
+				// set timeout for future updates
 				window.setTimeout(update, 150);
 			}
+		</script>
+
+		<script type="text/javascript">
+		
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-39145283-1']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		
 		</script>
 
 	</footer>
