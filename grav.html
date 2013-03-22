@@ -66,18 +66,84 @@
 				</div>
 				
 				
-					<h1>Gravity Identifier<small> how do we use it?</small></h1>
-					<p>There are a few important things to keep in mind when it comes to bringing your project to life.  In order to get our code working we need to use identifiers that will attach to objects in your HTML document.  We have provided you with a few identifiers, each with unique attributes, to get you started.  The first, and most important, is our gravity tag.</p>
+				<h1>
+					Gravity Identifier<br><small> how do we use it?</small>
+				</h1>
+				<p>There are a few important things to keep in mind when it
+					comes to bringing your project to life. You will be 
+					creating elements such as 
+					<code data-language="html">div</code>, 
+					<code data-language="html">span</code>,
+					<code data-language="html">img</code>
+					that you will be adding gravity to. A basic element looks like this:
+					
+<pre><code data-language="html">&lt;span&gt stuff inside a tag &lt;/span&gt</code></pre>
+					
+					Elements have attributes that we can set to values. 
+					An attribute is inside the tag of an element as shown here:
 
-						<p>Inspect the input code we have provided you on the right side of the screen and see if you can pinpoint how the gravity tag has been attached to the different objects.  You've most likely noticed that we used a value called <code data-language="html">class="grav"</code> on each of the elements that are now slave to our gravity enviornment!  This tag is the only way in which our objects can have the specific attributes attached to <code data-language="html">grav</code>.</p>
+<pre><code data-language="html">&lt;span attribute="value" &gt stuff &lt;/span&gt</code></pre>
+					
+					To add gravity to an element the attribute class is set to the value "grav" as follows:
+					
+<pre><code data-language="html">&lt;span class="grav" &gt stuff &lt;/span&gt</code></pre>
+					
+					The interactive example to the right shows the difference in setting 
+					the class attribute value. When the attribute is set to 
+					<pre><code data-language="html">&lt;span class="hello" ...</code></pre>
+					 the word HELLO doesn't have gravity act on it. Go ahead and change the word
+					 value of class to <code data-language="html">grav</code>
+					<br>
+					The next attribute that is important is the 
+					<code data-language="html">style</code>
+					attribute.  The value of this tag is a list of statements.
+					
+					<pre><code data-language="html">&lt;span style="property:value;..." ...</code></pre>
+					
+					There are many property values that can be set. To set the background color
+					of an element one of the following can be used:
+					
+<pre><code data-language="html">background-color:orange;
+background-color:red;
+background-color:green;
+</code></pre>
 
-						<p>The <code data-language="html">class="grav"</code> needs to be put inside the <brackets/> of our HTML object.</p>
-							
-							<strong class="alert-danger">BAD!</strong>
-							<pre><code data-language="html">&lt;span style="top:200px;left:400px; background: black"&gt class="grav"&lt;/span&gt</code></pre>
-							<strong class="alert-success">GOOD!</strong>
-							<pre><code data-language="html">&lt;span  class="grav" style="top:200px;left:400px;  background: black"&gt&lt;/span&gt</code></pre>
-						<p>Give it a try on the code provided on the right side of the screen. Remember, if you reload the page all work will be lost. :(</p>
+To change the size of the font the <code data-language="html">font-size</code> property can be 
+set to some number:
+
+<pre><code data-language="html">font-size:30pt;
+font-size:50pt;
+</code></pre>
+
+The color of the letters can be changed using the <code data-language="html">color</code> property:
+
+<pre><code data-language="html">color:blue;
+color:red;
+color:black;
+</code></pre>
+
+These can be combined inside the style attribute:
+
+<pre><code data-language="html">&lt;span style="background-color:green;font-size:50pt;" ...</code></pre>
+					
+
+
+<h3>Things that won't work</h3>
+
+Here the class attribute is not contained inside the tag:
+<pre class="alert-danger"><code data-language="html">&lt;span&gt; class="grav" &lt;/span&gt</code></pre>
+
+Here the attribute value is missing an exit quote:
+<pre class="alert-danger"><code data-language="html">&lt;span class="grav &gt; &lt;/span&gt</code></pre>
+
+Here we are missing a space:
+<pre class="alert-danger"><code data-language="html">&lt;spanclass="grav" &gt; &lt;/span&gt</code></pre>
+
+
+<p>Give it a try on the code provided on the right side of the
+	screen. Remember, if you reload the page all work will be lost. :(</p>				
+				
+				
 				</div>
 			</div>
 			
