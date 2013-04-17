@@ -56,8 +56,8 @@
 			<section class="span2">
 				<nav class="tutorial-navigation">
 					<ul class="nav nav-tabs nav-stacked">
-						<li><a href="basics.html">Basics</a></li>
-						<li class="active"><a href="grav.html">Grav Tag</a></li>
+						<li class="active"><a href="basics.html">Basics</a></li>
+						<li><a href="grav.html">Grav Tag</a></li>
 						<li><a href="solid.html">Solid Tag</a></li>
 						<li><a href="align.html">Alignment</a></li>
 						<li><a href="images.html">Images</a></li>
@@ -72,7 +72,7 @@
 
 				<!--GRAV-->
 					<section class="span6">
-						<div class="tutorial-content"><h2>Gravity Tag</h2>
+						<div class="tutorial-content"><h2>Basics</h2>
 
 
 
@@ -83,18 +83,71 @@
 				so we can fix it. Your comments will help us greatly!
 				</div>
 				
+				<p>There are a few important things to keep in mind when it
+					comes to bringing your project to life. You will be 
+					creating elements such as 
+					<code data-language="html">div</code>, 
+					<code data-language="html">span</code>,
+					<code data-language="html">img</code>
+					that you will be adding gravity to. A basic element looks like this:
 					
-				To add gravity to an element the attribute class is set to the value "grav" as follows:
+<pre><code data-language="html">&lt;span&gt stuff inside a tag &lt;/span&gt</code></pre>
 					
-<pre><code data-language="html">&lt;span class="grav" &gt stuff &lt;/span&gt</code></pre>
+					Elements have attributes that we can set to values. 
+					An attribute is inside the tag of an element as shown here:
+
+<pre><code data-language="html">&lt;span attribute="value" &gt stuff &lt;/span&gt</code></pre>
 					
-					The interactive example to the right shows the difference in setting 
-					the class attribute value. When the attribute is set to 
-					<pre><code data-language="html">&lt;span class="hello" ...</code></pre>
-					 the word HELLO doesn't have gravity act on it. Go ahead and change the word
-					 value of class to <code data-language="html">grav</code>
+					
 					<br>
-								
+					The next attribute that is important is the 
+					<code data-language="html">style</code>
+					attribute.  The value of this tag is a list of statements.
+					
+					<pre><code data-language="html">&lt;span style="property:value;..." ...</code></pre>
+					
+					There are many property values that can be set. To set the background color
+					of an element one of the following can be used:
+					
+<pre><code data-language="html">background-color:orange;
+background-color:red;
+background-color:green;
+</code></pre>
+
+To change the size of the font the <code data-language="html">font-size</code> property can be 
+set to some number:
+
+<pre><code data-language="html">font-size:30pt;
+font-size:50pt;
+</code></pre>
+
+The color of the letters can be changed using the <code data-language="html">color</code> property:
+
+<pre><code data-language="html">color:blue;
+color:red;
+color:black;
+</code></pre>
+
+These can be combined inside the style attribute:
+
+<pre><code data-language="html">&lt;span style="background-color:green;font-size:50pt;" ...</code></pre>
+					
+
+
+<h3>Things that won't work</h3>
+
+Here the class attribute is not contained inside the tag:
+<pre class="alert-danger"><code data-language="html">&lt;span&gt; class="grav" &lt;/span&gt</code></pre>
+
+Here the attribute value is missing an exit quote:
+<pre class="alert-danger"><code data-language="html">&lt;span class="grav &gt; &lt;/span&gt</code></pre>
+
+Here we are missing a space:
+<pre class="alert-danger"><code data-language="html">&lt;spanclass="grav" &gt; &lt;/span&gt</code></pre>
+
+
+<p>Give it a try on the code provided on the right side of the
+	screen. Remember, if you reload the page all work will be lost. :(</p>				
 				
 				
 
@@ -110,13 +163,34 @@
 					<div data-spy="affix" data-offset-top="100">
 						<form>
 							<textarea class="input" id="input">
-
-<span class="hello" style="background-color:yellow;font-size:30pt;">HELLO</span>
-
-<span class="grav" style="background-color:orange;font-size:30pt;">GRAV</span>
-
+<center>
+<span class="grav" style="background-color:red; font-size:30pt;">T</span>
+<span class="grav" style="background-color:red; font-size:30pt;">H</span>
+<span class="grav" style="background-color:red; font-size:30pt;">R</span>
+<span class="grav" style="background-color:red; font-size:30pt;">O</span>
+<span class="grav" style="background-color:red; font-size:30pt;">W</span>
+</center>
 
 <script src="http://gravityscript.googlecode.com/svn/trunk/throw.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 							</textarea>

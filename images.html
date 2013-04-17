@@ -25,7 +25,7 @@
 			        <span class="icon-bar"></span>
 			      </a>
 			      <!-- Be sure to leave the brand out there if you want it shown -->
-			      <a class="brand" href="index.html">Throw Platform</a>
+			      <a class="brand" href="#">Throw Platform</a>
 			 
 			      <!-- Everything you want hidden at 940px or less, place within here -->
 			      <div class="nav-collapse collapse">
@@ -57,10 +57,10 @@
 				<nav class="tutorial-navigation">
 					<ul class="nav nav-tabs nav-stacked">
 						<li><a href="basics.html">Basics</a></li>
-						<li class="active"><a href="grav.html">Grav Tag</a></li>
+						<li><a href="grav.html">Grav Tag</a></li>
 						<li><a href="solid.html">Solid Tag</a></li>
 						<li><a href="align.html">Alignment</a></li>
-						<li><a href="images.html">Images</a></li>
+						<li class="active"><a href="images.html">Images</a></li>
 						<li><a href="impact.html">Impact</a></li>
 					</ul>
 				</nav>
@@ -72,7 +72,7 @@
 
 				<!--GRAV-->
 					<section class="span6">
-						<div class="tutorial-content"><h2>Gravity Tag</h2>
+						<div class="tutorial-content"><h2>Images</h2>
 
 
 
@@ -84,21 +84,17 @@
 				</div>
 				
 					
-				To add gravity to an element the attribute class is set to the value "grav" as follows:
-					
-<pre><code data-language="html">&lt;span class="grav" &gt stuff &lt;/span&gt</code></pre>
-					
-					The interactive example to the right shows the difference in setting 
-					the class attribute value. When the attribute is set to 
-					<pre><code data-language="html">&lt;span class="hello" ...</code></pre>
-					 the word HELLO doesn't have gravity act on it. Go ahead and change the word
-					 value of class to <code data-language="html">grav</code>
-					<br>
-								
+				For images you use the <code data-language="html">img</code> element. 
+				This element has an attribute named <code data-language="html">src</code> where you specify
+				the URL of the image. Here is an example:
 				
 				
+					
+<pre><code data-language="html">&lt;img src="http://throw-platform.github.com/img/turkey.png" /&gt;</code></pre>
+					
+To add gravity we need to <code data-language="html">grav</code> tag.
 
-
+<pre><code data-language="html">&lt;img class="grav" src="http://throw-platform.github.com/img/turkey.png" /&gt;</code></pre>
 
 
 
@@ -111,12 +107,13 @@
 						<form>
 							<textarea class="input" id="input">
 
-<span class="hello" style="background-color:yellow;font-size:30pt;">HELLO</span>
+<img src="http://throw-platform.github.com/img/turkey.png" />
 
-<span class="grav" style="background-color:orange;font-size:30pt;">GRAV</span>
+<img class="grav" src="http://throw-platform.github.com/img/turkey.png" />
 
 
 <script src="http://gravityscript.googlecode.com/svn/trunk/throw.js"></script>
+ 
 
 
 							</textarea>
@@ -136,15 +133,8 @@
 
 
 
-		<footer class="footer-container">
-			<div class="container-fluid row-fluid">
-				<div class="span6">
-					footer content
-				</div>
-				<div class="span6">
-					footer content
-				</div>
-			</div>
+		<footer>
+
 			<script src="js/jquery-1.7.min.js"></script>
 			<script src="js/bootstrap.js"></script>
 			<script src="js/main.js"></script>

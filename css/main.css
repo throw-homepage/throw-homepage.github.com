@@ -1,266 +1,154 @@
-/*
-AUTHOR: matthew ciampa
-URL: http://www.matthewciampadesign.com/
-*/
+
+/* GLOBAL */
+
+.container-fluid{
+	width: 90%;
+	margin: 0 auto;
+
+}
+
+.heading-about{
+	padding: 20px 0px 20px 0px;
+	background: #E44C4C;
+	color: white;
+	margin-bottom: 20px;
+
+}
+
+.heading-tutorial{
+	padding: 20px 0px 20px 0px;
+	background: #3DA0B3;
+	color: white;
+	margin-bottom: 20px;
+
+}
+
+.heading-showcase{
+	padding: 20px 0px 20px 0px;
+	background: #673DB3;
+	color: white;
+	margin-bottom: 20px;
+
+}
+
+.heading-getting-started{
+	padding: 20px 0px 20px 0px;
+	background: #3DB363;;
+	color: white;
+	margin-bottom: 20px;
+
+}
+
+.heading-index{
+	padding: 20px 0px 20px 0px;
+	background: #FFC54A/*#3DB363*/;
+	color: #444;
+	margin-bottom: 20px;
+	text-align: center;
+
+}
+
+.heading-index P{
+	font-size: 24px;
+	line-height: 50px;
+	font-weight: 300;
+}
+
+.section-break{
+	padding: 50px 0px 50px 0px;
+	border-bottom: 1px solid #efefef;
+}
+
+.feedback{
+	min-width: 100px;
+	float: right;
+	padding: 15px 20px 15px 20px;
+	color: #FFF;
+}
+
+.feedback:hover{
+	background: #FF5454;
+}
 
 
 /* HOMEPAGE */
 
-.box{
-	background: white;
-	border: 1px solid #ccc;
+.column-well{
+		    border-radius: 10px;
+	   -moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color: white;
+	text-align: center;
+	display: block;
+	float: left;
+
+	
+
 }
 
-.box-inner{
-	padding: 100px;
+.container-create{
+	width: 600px;
+	margin: 0 auto;
 }
 
-.homepage{
-	background: rgb(155, 223, 255);
+.column-well img{
+	width: 25%;
+	height: auto;
 }
-.pOne{
-	position:absolute;
-	width: 30%;
+
+.waves{
+	background: url("../img/wave.png") repeat-x;
+	position: absolute;
 	height: 50px;
 	left: 0;
-	bottom: 300px;
-	background: #444;
-}
-
-.pWall{
-	position: absolute;
-	height: 200px;
-	bottom: 300px;
-	left: 30%;
-	width: 50px;
-	background: #444;
-}
-
-.pTwo{
-	position: absolute;
-	width: 25%;
-	height: 20px;
-	right: 10%;
-	bottom: 300px;
-	background: #444;
-}
-
-.pTwo-WallOne{
-	position: absolute;
-	width: 20px;
-	height: 200px;
-	right: 10%;
-	bottom: 300px;
-	background: #444;
-}
-.pTwo-WallTwo{
-	position: absolute;
-	width: 20px;
-	height: 20%;
-	right: 35%;
-	bottom: 300px;
-	background: #444;
-}
-
-.pThree{
-	position: absolute;
-	width: 10%;
-	height: 20px;
-	right: 50%;
-	bottom: 100px;
-	background: #444;
-}
-
-.pThree-wallOne{
-	position: absolute;
-	width: 20px;
-	height: 200px;
-	right: 50%;
-	bottom: 100px;
-	background: #444;
-}
-
-.pThree-wallTwo{
-	position: absolute;
-	width: 20px;
-	height: 200px;
-	right: 60%;
-	bottom: 100px;
-	background: #444;
-}
-
-.scoreboard{
-	background: white;
-	padding: 20px;
-	position: absolute;
 	right: 0;
-	top: 60px;
-	width: 100px;
-	height: 100px;
-	color: #444;
-	text-align: center;
-	font-size: 22px;
-}
-.shape{
+	bottom: 0;
+	-webkit-animation: move .2s infinite; /* IE 10+ */
 	
-	background: #202020;
-	color: white;
-	float: left;
-	text-align: center;
-}
-
-.shape-inner{
-	padding: 20px;	
-}
-
-.random-shape{
-	width: 2px;
-	height: 2px;
-	border-radius: 50%;
-	float: left;
-	background:  black;
-	position: absolute;
-	top: 0;
-	right: 50%;
-}
-
-.intro{
-	float: left;
-	width: 50%;
-	position: absolute;
-	background: #efefef;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
-	border: 1px solid #ccc;
-}
-
-.cta{
-	width: 600px;
-	margin: 0 auto;
-}
-
-.cta-2{
-	width: 600px;
-	margin: 0 auto;
-	position: absolute;
-}
-
-.home-instructions{
-	position: absolute;
-	left: 0px;
-	top: 62px;
-	background: white;
-	padding: 50px;
-}
-
-.links-inner{
-	text-align: center;
-	color: #444;
-}
-
-.tutorial-wrapper{
-	background: white;
-	overflow: hidden;
-	overflow-y: scroll;
-	border-right: 1px solid #ccc;
-}
-
-.tutorial-content{
-	padding: 50px 50px 0px 50px;
-}
-.no-space [class*="span"] {
-    margin-left: 0;
-}
-.navbar-left{
-	margin-top: 50px;
-	background: #efefef;
-	-webkit-border-bottom-left-radius: 6px;
-	-moz-border-bottom-left-radius: 6px;
-	border-border-bottom-left-radius: 6px;
-	-webkit-border-top-left-radius: 6px;
-	-moz-border-top-left-radius: 6px;
-	border-border-top-left-radius: 6px;
-	border-left: 1px solid #ccc;
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-}
-
-.navbar-left-wrapper{
-	border-right: 1px solid #ccc;
-}
-.pub{
-	float: right;
-}
-
-.grav{
-	/*border-radius: 50%;*/
-}
-
-.output-col{
-	width: 40.42553191489362%;
-	float: left;
-	display: block;
-}
-
-.drop{
-	background: #efefef;
-	border-radius: 50%;
-	border: 5px dashed #ccc;
-}
-
-#codeTextarea{
-	font-size: 12px;
 }
 
 
-.frame-wrapper{
-	width: 40.42553191489362%;
-	background: #EFEFEF;
-	padding-left: 20px;
-	padding-top: 10px;
-	float: left;
-	-webkit-border-bottom-right-radius: 6px;
-	-moz-border-bottom-right-radius: 6px;
-	border-border-bottom-right-radius: 6px;
-	-webkit-border-top-right-radius: 6px;
-	-moz-border-top-right-radius: 6px;
-	border-border-top-right-radius: 6px;
-	border-right: 1px solid #CCC;
-	border-top: 1px solid #CCC;
-	border-bottom: 1px solid #CCC;
-	margin: 50px 0 50px 0
-}
-.frame-wrapper h3{
-	color: #08C;
+.sky{
+	background: #96D1FF;
 }
 
-.page-wrapper{	
-	clear: both;
+@media (max-width: 767px){
+	.column-well{
+		padding: 5px!important;
+	}
+	.column-well h2{
+		font-size: 14px!important;
+	}
+	.feedback{
+		display: none;
+	}
+	.heading-index{
+		padding: 10px 0px 10px 0px!important;
+		color: #444;
+		margin: -20px -20px 0px -20px!important;
+		font-weight: 400;
+	}
+	.heading-index p{
+		font-size: 12px!important;
+		line-height: 15px!important;
+	}
+	.heading-index h1{
+		font-size: 16px;
+		padding: 0!important;
+		margin: 0!important;
+	}
+	.column-well p{
+		display: none!important;
+	}
+	.column-well img{
+		width: 50%;
+		height: auto;
+	}
+	.affix{
+		position: relative!important;
+	}
+	
 }
-
-iframe{
-	background-color: white;
-	border: 1px solid #CCC;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
-	transition: border linear 0.2s, box-shadow linear 0.2s;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-}
-
-.white-background{
-	background: white;
-	padding: 50px 50px 50px 50px;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-}
-
 
 /*=========================== 
 
@@ -280,108 +168,60 @@ SCROLLBAR (WEBKIT ONLY) CSS
 ::-webkit-scrollbar-track-piece{
 }
 ::-webkit-scrollbar-thumb{
-	background: #08C;
+	background: #3DA0B3;
 }
 ::-webkit-scrollbar-corner{
 }
 ::-webkit-resizer{
 }
 
-/*=========================== 
 
-		THIRD-PARTY CSS 
+/* TUTORIAL */
 
-============================*/
+.input{
+	height: 200px;
+}
 
+.output{
+	height: 200px;
+}
 
-
-
-/**
- * GitHub theme
- *
- * @author Craig Campbell
- * @version 1.0.4
- */
-pre {
+iframe{
 	border: 1px solid #ccc;
-	word-wrap: break-word;
-	padding: 6px 10px;
-	line-height: 19px;
-	margin-bottom: 20px;
+	padding: 6px;
+	background: white;
+}
+.interaction{
+	width: 300px;
+	display: block;
+	float: left;
 }
 
-code {
-	border: 1px solid #eaeaea;
-	margin: 0px 2px;
-	padding: 0px 5px;
-	font-size: 16px;
+.content-scroller{
+	overflow: hidden;
+	overflow-y: scroll;
+}
+/*
+.tutorial-content{
+	overflow:hidden;
+	overflow-y: scroll;
+}*/
+
+
+/* FOOTER */
+
+.footer-container{
+	width: 100%;
+	color: white;
+	float: left;
+	min-height: 250px;
+	background: #2a2a2a;
+	margin-top: 100px;
+	padding-top: 50px;
+	clear: both;
 }
 
-pre code {
-	border: 0px;
-	padding: 0px;
-	margin: 0px;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
+.footer-content{
+	color: white;
+	padding: 50px;
 }
-
-pre, code {
-	font-family: Consolas, 'Liberation Mono', Courier, monospace;
-	color: #333;
-	background: #f8f8f8;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-}
-
-pre, pre code {
-	font-size: 13px;
-}
-
-pre .comment {
-	color: #998;
-}
-
-pre .support {
-	color: #0086B3;
-}
-
-pre .tag, pre .tag-name {
-	color: navy;
-}
-
-pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
-	font-weight: bold;
-}
-
-pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
-	color: #333;
-}
-
-pre .constant.numeric, pre .keyword.unit, pre .hex-color {
-	font-weight: normal;
-	color: #099;
-}
-
-pre .entity.class {
-	color: #458;
-}
-
-pre .entity.id, pre .entity.function {
-	color: #900;
-}
-
-pre .attribute, pre .variable {
-	color: teal;
-}
-
-pre .string, pre .support.value  {
-	font-weight: normal;
-	color: #d14;
-}
-
-pre .regexp {
-	color: #009926;
-}
-
