@@ -123,7 +123,8 @@ object2.innerHTML = parseInt(object2.innerHTML) +1
 
 							</textarea>
 						</form>
-						<iframe name="output" class="output" id="output" style="width: 100%;"></iframe>
+						<!--<iframe name="output" class="output" id="output" style="width: 100%;"></iframe>-->
+						<div id="outputframe"></div>
 					</section>
 
 
@@ -168,17 +169,16 @@ object2.innerHTML = parseInt(object2.innerHTML) +1
 					
 					//create new iframe so we clean out any old errors
 					var iframe = $('<iframe></iframe>', {
-					      name:"output"
-					      ,id:"output"
-					      ,src: "base.html"
+					      name:"contentFrame"
+					      ,id:"contentFrame"
 					  });
 					iframe.css("height", "100%").css("width", "100%");
-					$("#output").text('');
-				 	iframe.appendTo("#output");
+					$("#outputframe").text('');
+				 	iframe.appendTo("#outputframe");
 					
 				 	//get the raw element so we can append scripts
 				 	//jquery append will not allow script tags to be appended
-					v = document.getElementById('output');
+					v = document.getElementById('contentFrame');
 					v.contentWindow.document.open();
 					v.contentWindow.document.write(old);
 					v.contentWindow.document.close();
