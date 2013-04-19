@@ -1,4 +1,3 @@
-
 /* GLOBAL */
 
 .container-fluid{
@@ -182,7 +181,7 @@ SCROLLBAR (WEBKIT ONLY) CSS
 	height: 200px;
 }
 
-.output{
+#outputframe{
 	height: 200px;
 }
 
