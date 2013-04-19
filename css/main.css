@@ -69,6 +69,10 @@
 	background: #FF5454;
 }
 
+textarea{
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
 
 /* HOMEPAGE */
 
