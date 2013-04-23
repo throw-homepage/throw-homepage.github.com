@@ -191,7 +191,7 @@ SCROLLBAR (WEBKIT ONLY) CSS
 }
 
 .nav-button a{
-	padding:5px
+	padding: 10px!important;
 }
 
 iframe{
