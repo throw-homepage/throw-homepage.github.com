@@ -190,6 +190,10 @@ SCROLLBAR (WEBKIT ONLY) CSS
 	height: 200px;
 }
 
+.nav-button li{
+	padding:5px
+}
+
 iframe{
 	border: 1px solid #ccc;
 	padding: 6px;
