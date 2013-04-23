@@ -190,7 +190,7 @@ SCROLLBAR (WEBKIT ONLY) CSS
 	height: 200px;
 }
 
-.nav-button button{
+.nav-button a{
 	padding:5px
 }
 
