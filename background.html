@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<title>Throw Platform</title>
+		
+		<meta name="description" content="Throw Platform is a learning tool to engage students in learning more about computer science">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-responsive.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	
+	<body onload="init();">
+		<header>
+			<div class="navbar navbar-inverse">
+				<div class="navbar-inner navbar-fixed-top">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </a>
+			      <!-- Be sure to leave the brand out there if you want it shown -->
+			      <a class="brand" href="index.html">Throw Platform</a>
+			 
+			      <!-- Everything you want hidden at 940px or less, place within here -->
+			      <div class="nav-collapse collapse">
+			       		<ul class="nav">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="getting-started.html">Create</a></li>
+							<li class="active"><a href="basics.html">Tutorial</a></li>
+							<li><a href="showcase.html">Showcase</a></li>
+							<li class="nav-button"><a href="http://josephpcohen.com/give/?throwhomepage" target="_blank"><button class="btn btn-danger">Support</button></a></li>
+						</ul>
+			      </div>
+					<a href="https://docs.google.com/spreadsheet/viewform?formkey=dEI2bm5KR3U1RVVUWWpneTBLRkE2UFE6MQ">
+						<div class="feedback"><i class="icon-envelope icon-white"></i> Send us feedback!</div>
+					</a>
+				</div>
+			</div>
+			<section class="heading-tutorial">
+				<div class="container-fluid">
+					<h1>Tutorial</h1>
+				</div>
+			</section>
+		</header>
+
+		<!--MAIN WRAPPER-->
+		<article class="container-fluid row-fluid clearfix footer-hack">
+
+			<!--LEFT NAVIGATION TABS-->
+			<section class="span2">
+				<nav class="tutorial-navigation">
+					<ul class="nav nav-tabs nav-stacked">
+						<li><a href="basics.html">Basics</a></li>
+						<li><a href="grav.html">Grav Tag</a></li>
+						<li><a href="solid.html">Solid Tag</a></li>
+						<li><a href="align.html">Alignment</a></li>
+						<li><a href="images.html">Images</a></li>
+						<li><a href="impact.html">Impact</a></li>
+						<li class="active"><a href="background.html">Background</a></li>
+					</ul>
+				</nav>
+			</section>
+
+			<!--MAIN CONTENT-->
+			<section class="span10 tab-content row-fluid">
+
+
+				<!--GRAV-->
+					<section class="span6">
+						<div class="tutorial-content"><h2>Setting a background</h2>
+
+
+
+
+
+
+
+					
+				To add a background insert the following code at the top of your:
+					
+<pre><code data-language="html">&lt;body style="background-image:url(URL);background-size:cover;"&gt;</code></pre>
+					
+<p>
+In the code above set the URL to the background you want.
+
+</p>
+								
+				
+<h3>Things that won't work</h3>
+
+If you don't put the URL inside <i>url(URL)</i>:
+<pre class="alert-danger"><code data-language="html">&lt;body style="background-image:http://throw-homepage.github.io/img/strahov-abbey-library.jpg;background-size:cover;"&gt;</code></pre>			
+
+
+
+
+
+
+						</div>
+					</section>
+
+					<section class="span6">
+					<div data-spy="affix" data-offset-top="100">
+						<form>
+							<textarea class="input" id="input">
+
+<body style="background-image:url(http://throw-homepage.github.io/img/strahov-abbey-library.jpg);background-repeat: no-repeat;background-size: cover;">
+
+<center>
+<span class="grav" style="background-color:orange;font-size:30pt;">Throw</span>
+</center>
+
+<script src="//gravityscript.googlecode.com/svn/trunk/throw.js"></script>
+
+
+							</textarea>
+						</form>
+						<!--<iframe name="output" class="output" id="output" style="width: 100%;"></iframe>-->
+						<div id="outputframe"></div>
+					</section>
+
+
+
+
+					</div>
+			</section><!--end tab content-->
+		</article><!--end main container-->
+
+
+
+
+
+
+		<footer class="footer-container">
+			<div class="container-fluid row-fluid">
+				<div class="span6">
+					footer content
+				</div>
+				<div class="span6">
+					footer content
+				</div>
+			</div>
+			<script src="js/jquery-1.7.min.js"></script>
+			<script src="js/bootstrap.js"></script>
+			<script src="js/main.js"></script>
+			<script src="js/jquery.main.js"></script>
+			<!--
+			<script src="http://gravityscript.googlecode.com/svn/trunk/throw-dev.js"></script>
+			-->
+			<script type="text/javascript">
+var old = '';
+
+			function init() {
+				update();
+			}
+
+			function update() {
+				
+				//console.log("update");
+				var div = $("#input");
+
+				if (old != div.val()) {
+
+					//console.log("updating iframe");
+					old = div.val();
+					
+					
+					//create new iframe so we clean out any old errors
+					var iframe = $('<iframe></iframe>', {
+					      name:"contentFrame"
+					      ,id:"contentFrame"
+					  });
+					iframe.css("height", "100%").css("width", "100%");
+					$("#outputframe").text('');
+				 	iframe.appendTo("#outputframe");
+					
+				 	//get the raw element so we can append scripts
+				 	//jquery append will not allow script tags to be appended
+					v = document.getElementById('contentFrame');
+					v.contentWindow.document.open();
+					v.contentWindow.document.write(old);
+					v.contentWindow.document.close();
+					
+				}
+				// set timeout for future updates
+				window.setTimeout(update, 150);
+			}
+			</script>
+		</footer>
+	</body>
+</html>
