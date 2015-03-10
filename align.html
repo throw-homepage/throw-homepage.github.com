@@ -63,6 +63,7 @@
 						<li class="active"><a href="align.html">Alignment</a></li>
 						<li><a href="images.html">Images</a></li>
 						<li><a href="impact.html">Impact</a></li>
+						<li><a href="background.html">Background</a></li>
 					</ul>
 				</nav>
 			</section>
@@ -75,45 +76,26 @@
 					<section class="span6">
 						<div class="tutorial-content"><h2>Alignment</h2>
 						
-						<div class="alert alert-block">
-				This is a new project. Please let us know if something is not clear
-				so we can fix it. Your comments will help us greatly!
-				</div>
+					<p></p>
+					
+				<p>The alignment of objects is done using the <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code> properties inside the style attribute.</p>
 
-<p>Understanding how to align your divs you need to have a basic understanding of CSS (Cascading Style Sheets).  Without CSS, HTML would would have no aesthetic.  CSS allows us to bring out HTML to life by adding specific properties to each of our divs.</p>
-
-					<p>There are a few ways of implementing CSS.  The first way uses identifiers, like grav and solid, to apply the properties to your divs.  There are two popular types of identifiers used for CSS.  <code>class=</code> and <code>id=</code>.  Classes can have multiple identifiers strung together where as id can only use one.  We won't get into convention and aesthetic of css in this tutorial.  </p>
-
-					<p>you can call on these different types of identifiers with a .css file or within your HTML document.  For this example we will simply use the second method.  Inspect the code below.</p>
-
-					<pre>
-					<code data-language="CSS">
-&lt;style>
-.left-top{
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	background: red;
-	left: 0px;
-	top: 0px;
-}
-.right-bottom{
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	background: red;
-	right: 0px;
-	bottom: 0px;
-}
-&lt;/style>
-				</code>
-				</pre>
-				<p>You can also insert the CSS files into the div itself by <code>style="code here"</code>. </p>
-
-				<pre><code data-language="HTML">&lt;div class="middle" style="position: absolute; width: 50px; height: 50px; left: 50%; bottom: 50%;">1&lt;/div></code></pre
+<div class="alert alert-block">Note: In order for these to work the properly <code>position: absolute;</code> must be set. </div>
+			
+			<p>The values that you can fill in can be in <code>px</code> meaning pixels on the screen or <code>%</code> which would be the precentage from that side of the screen. 
+			For example: <code>style="position:absolute;left:50%;"</code> would put the element's left hand side in the middle of the screen.</p>
+			
+				<p> You should only set one value for each direction. For example if you set <code>top</code> then setting <code>bottom</code> would not make sense.</p>
 				
-				<p>By default, divs are aligned statically.  Applying <code>position: absolute;</code> will break out of this and will break the grid of the divs.  With <code>position: absolute;</code>, you can now use <code>top:number; bottom:number; left:number; right:number;</code> to place the div around the page as you please.  </p>
 				
+				
+<h3>Things that won't work</h3>
+
+Here multiple style tags are specified. You should only use one:
+<pre class="alert-danger"><code data-language="html">&lt;div style="position:absolute;" style="left:50%;"&gt; &lt;/div&gt</code></pre>
+			
+Here a <code>=</code> is used instead of a <code>:</code>
+<pre class="alert-danger"><code data-language="html">&lt;div style="position=absolute;left=10px"&gt; &lt;/div&gt</code></pre>
 
 
 
@@ -124,30 +106,24 @@
 					<div data-spy="affix" data-offset-top="100">
 						<form>
 							<textarea class="input" id="input">
-<style>
-.left-top{
-	position: absolute;
+<div style="position: absolute;
 	width: 50px;
 	height: 50px;
 	background: red;
 	left: 0px;
-	top: 0px;
-}
-.right-bottom{
-	position: absolute;
+	top: 0px;">1</div>
+
+<div style="position: absolute;
 	width: 50px;
 	height: 50px;
 	background: red;
 	right: 0px;
-	bottom: 0px;
-}
-</style>
+	bottom: 0px;">1</div>
 
-<div class="left-top">1</div>
-<div class="right-bottom">1</div>
-<div class="middle" style="position: absolute; background: red; width: 50px; height: 50px; left: 50%; bottom: 50%;">1</div>
+<div style="position: absolute; background: red; width: 50px; height: 50px; left: 50%; bottom: 50%;">1</div>
 
-							</textarea>
+
+</textarea>
 						</form>
 						<!--<iframe name="output" class="output" id="output" style="width: 100%;"></iframe>-->
 						<div id="outputframe"></div>

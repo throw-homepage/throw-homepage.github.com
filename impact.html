@@ -63,6 +63,7 @@
 						<li><a href="align.html">Alignment</a></li>
 						<li><a href="images.html">Images</a></li>
 						<li class="active"><a href="impact.html">Impact</a></li>
+						<li><a href="background.html">Background</a></li>
 					</ul>
 				</nav>
 			</section>
@@ -75,22 +76,24 @@
 					<section class="span6">
 						<div class="tutorial-content"><h2>Impacts</h2>
 
-<div class="alert alert-block">
-				This is a new project. Please let us know if something is not clear
-				so we can fix it. Your comments will help us greatly!
-				</div>
 
-<p>In addition to using the grav and solid tags, we can now make something happen when they impact.  We are going to use javascript/jquery to achieve this. We have setup an empty function for you to get started with below.</p>
-<pre><code data-language="javscript">
+<p>For every object that is <code>grav</code> or <code>impact</code> you can make something happen when they impact.</p>
 
+<p>To do this you need to add the <code>&lt;script type="text/javascript"&gt;</code> and <code>&lt;/script&gt;</code> as follows:</p>
+
+
+<pre><code data-language="javscript">&lt;script type="text/javascript"&gt;
 function impact(object1, object2){
-
+	//things to happen here
 }
+&lt;/script&gt;</code></pre>
 
-</code></pre>
-					<p>Using the function provided above we can now start figuring out what we want our objects to do.  We can use ID/Class tags, like we used in the previous section, call on certain objects.</p>
-					
-					<p>The right hand side of the screen uses the impact function to write to an empty div and giv us the objects that have collided with each other.</p>
+<p>When two elements hit each other the function <code>impact</code> will be called with the two objects that hit each other. 
+Using <i>parseInt(object1.innerHTML)</i> function you can get the value of the number inside and. 
+</p>
+
+
+<p>On the right hand side of the screen uses the impact function to write to an empty div and giv us the objects that have collided with each other.</p>
 					
 					
 

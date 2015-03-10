@@ -63,6 +63,7 @@
 						<li><a href="align.html">Alignment</a></li>
 						<li class="active"><a href="images.html">Images</a></li>
 						<li><a href="impact.html">Impact</a></li>
+						<li><a href="background.html">Background</a></li>
 					</ul>
 				</nav>
 			</section>
@@ -76,14 +77,6 @@
 						<div class="tutorial-content"><h2>Images</h2>
 
 
-
-
-
-<div class="alert alert-block">
-				This is a new project. Please let us know if something is not clear
-				so we can fix it. Your comments will help us greatly!
-				</div>
-				
 					
 				For images you use the <code data-language="html">img</code> element. 
 				This element has an attribute named <code data-language="html">src</code> where you specify
@@ -97,6 +90,23 @@ To add gravity we need to <code data-language="html">grav</code> tag.
 
 <pre><code data-language="html">&lt;img class="grav" src="http://throw-platform.github.com/img/turkey.png" /&gt;</code></pre>
 
+
+<p>In order to get a URL for an image on your computer you can use <a href="http://imgur.com">http://imgur.com</a> to host the image and then include the URL which ends in ".png".
+</p>
+
+<p>To find images you can use <a href="http://image.google.com">Google Image Search http://image.google.com</a>. 
+When you find an image you like right click to find the URL.
+</p>
+
+
+
+<h3>Things that won't work</h3>
+
+The URL is wrong. You must specify <code>http://</code> exactly as it appears:
+<pre class="alert-danger"><code data-language="html">&lt;img src="ttp://throw-platform.github.com/img/turkey.png" /&gt;</code></pre>
+			
+The URL is wrong. The URL must be something that works when you put it in a browser:
+<pre class="alert-danger"><code data-language="html">&lt;img src="turkey.png" /&gt;</code></pre>
 
 
 

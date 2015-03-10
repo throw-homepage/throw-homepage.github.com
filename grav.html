@@ -63,6 +63,7 @@
 						<li><a href="align.html">Alignment</a></li>
 						<li><a href="images.html">Images</a></li>
 						<li><a href="impact.html">Impact</a></li>
+						<li><a href="background.html">Background</a></li>
 					</ul>
 				</nav>
 			</section>
@@ -78,12 +79,6 @@
 
 
 
-
-<div class="alert alert-block">
-				This is a new project. Please let us know if something is not clear
-				so we can fix it. Your comments will help us greatly!
-				</div>
-				
 					
 				To add gravity to an element the attribute class is set to the value "grav" as follows:
 					
@@ -97,7 +92,16 @@
 					<br>
 								
 				
-				
+<h3>Things that won't work</h3>
+
+Here the class attribute is not contained inside the tag:
+<pre class="alert-danger"><code data-language="html">&lt;span&gt; class="grav" &lt;/span&gt</code></pre>
+
+Here the attribute value is missing an exit quote:
+<pre class="alert-danger"><code data-language="html">&lt;span class="grav &gt; &lt;/span&gt</code></pre>
+
+Here we are missing a space:
+<pre class="alert-danger"><code data-language="html">&lt;spanclass="grav" &gt; &lt;/span&gt</code></pre>				
 
 
 
